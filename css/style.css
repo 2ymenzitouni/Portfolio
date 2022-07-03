@@ -1,0 +1,324 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* outline: 1px solid green; */
+}
+body{
+    font-family: "Poppins", sans-serif;
+    height:5000px
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0 auto;
+}
+/* Start header */
+header{
+    position: fixed;
+    width: 100%;
+    padding:20px 0;
+    transition: background-color ease-out .8s;
+    box-shadow: 0px 2px 7px #0000003d;
+    z-index: 5555555;
+}
+header nav{
+    display: flex;
+}
+header .logo{
+    flex: 1;
+}
+header .menu{
+    position: relative;
+    width: 30px;
+    cursor: pointer;
+    z-index: 555;
+}
+header .menu span{
+    background-color: black;
+    border-radius: 20px;
+    width: 100%;
+    height: 4px;
+    display: block;
+    position: absolute;
+    transition: all .5s;
+}
+header .menu span:first-child{
+    top: 0;
+}
+header .menu span:nth-child(2){
+    top:50%;
+    transform: translateY(-50%);
+}
+header .menu span:last-child{
+    bottom: 0;
+}
+header nav ul{
+    position: absolute;
+    top:200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+header nav ul li{
+    margin-bottom: 45px;
+}
+
+header nav ul li a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+
+}
+header nav ul li a:hover{
+    color: #f5df4e;
+}
+.list{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.877);
+    opacity: 0;
+    /* display: none; */
+    transition: opacity .8s; 
+}
+.list li .active{
+    color: #f5df4e;
+}
+/* End header */
+/* Start content */
+.content{
+    width: 100%;
+    height: 70vh;
+    background-color: #f5df4e;
+    padding-top: 200px;
+}
+@media screen and (max-width:1000px){
+    .content{
+        height: 100vh;
+    }
+}
+.content .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@media screen and (max-width:1000px) {
+    .content .container{
+       flex-direction: column-reverse;
+       padding: 0 50px;
+    }
+    .content{
+        padding-top: 100px;
+    }
+}
+.content .container .col-1{
+    line-height: 80px;
+    text-align: left;
+    color: #252525;
+    z-index: 555;
+}
+@media screen and (max-width:1000px) {
+    .content .container .col-1 {
+        line-height: 60px;
+        text-align: left;
+        color: #252525;
+        z-index: 555;
+    }
+}
+.content .container .col-1 p:first-child{
+    font-size: 40px;
+    text-transform: uppercase;
+    word-spacing: 2px;
+}
+@media screen and (max-width:670px) {
+    .content .container .col-1 p:first-child{
+        font-size: 25px;
+    }
+}
+.content .container .col-1 h1{
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight:900;
+    transition: all .3s;
+}
+@media screen and (max-width:670px) {
+    .content .container .col-1 h1{
+        font-size: 30px;
+    }
+}
+.content .container .col-1 p:last-child{
+    color: beige;
+}
+.content .container .col-1 p:not(:first-child){
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.content .container .col-1 a{
+    padding: 20px 25px;
+}
+@media screen and (max-width:450px) {
+    .content .container .col-1 a{
+        padding: 20px 5px;
+    }
+}
+.content .container .col-1 .btn-black{
+    background-color: #252525;
+    color: #fff;
+    font-weight: bold;
+}
+.content .container .col-1 .btn-transparent{
+    color: #252525;
+    font-weight: bold;
+}
+.content .container .country{
+    padding-left: 10px;
+}
+.content .container .col-2{
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/Aymen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 10px solid rgb(240, 240, 240);
+    filter: grayscale(100%);
+}
+@media screen and (max-width:1000px) {
+    .content .container .col-2{
+        width: 230px;
+        height: 230px;
+    }
+}
+/* End content */
+/* Start about */
+.about{
+    width: 100%;
+    padding-top: 100px;
+}
+.about .container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto auto 400px 1fr;
+    gap: 50px;
+}
+.about{
+    text-align: center;
+}
+.about .container > p {
+    grid-column: 3/ span 1;
+    background-color: #f5df4e;
+    text-align: center;
+    align-self: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.about .container h1{
+    grid-column: span 5;
+    /* order: 2; */
+}
+.about .container .col-1{
+    /* background-color: green; */
+    /* align-self: center; */
+    grid-column: span 3;
+    /* padding: 50px; */
+    line-height: 50px;
+    /* order: 4; */
+}
+.about .container .col-1 h1 span{
+    font-weight: bolder;
+    font-size: 35px;
+    position: relative;
+}
+.about .container .col-1 h1 span::after{
+    content: "";
+    bottom: -5px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f5df4e;
+    position: absolute;
+}
+.about .container .col-1 p{
+    font-size: 2rem;
+    /* order:3; */
+}
+@media screen and (max-width:550px) {
+    .about .container{
+        padding: 0 20px;
+    }
+}
+.about .container .col-2{
+    /* background-color: yellow; */
+    background-image: url('../img/Aymen.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: span 2;
+    height: 300px;
+    /* order: 3; */
+    box-shadow: 15px 15px 0px #f5df4e;
+}
+.about .container .col-3{
+    grid-column: span 5;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    row-gap: 30px;
+}
+@media screen and (max-width:750px){
+    .about .container .col-3{
+        grid-template-columns: repeat(3,auto)
+    }
+}
+@media screen and (max-width:640px){
+    .about .container .col-3{
+        grid-template-columns: repeat(2,auto)
+    }
+}
+@media screen and (max-width:540px){
+    .about .container .col-3{
+        grid-template-columns: auto
+    }
+}
+.about .container .col-3 .active_1{
+    font-weight: bold;
+    color: #6C757D;
+    padding-bottom: 20px;
+}
+.about .container .col-3 .active_2{
+    font-weight: bold;
+    display: inline;
+}
+@media screen and (max-width:1200px){
+    .about .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .about .container > p {
+        order: 1;
+    }
+    .about .container h1{
+        order: 2;
+    }
+    .about .container .col-1{
+        order: 4;
+    }
+    .about .container .col-2{
+        order: 3;
+    }
+    .about .container .col-3{
+        order: 5;
+    }
+}
+/* End about */
