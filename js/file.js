@@ -14,6 +14,7 @@ menu.addEventListener("click",function(){
         spans[1].style.opacity = '0'
         spans[2].style.transform = `rotate(${-45}deg)`
         back.style.opacity='1'
+        back.style.visibility = 'visible'
         // back.style.display = 'block'
         // cols.forEach(element => {
         //     element.style.zIndex='-500'
@@ -34,10 +35,12 @@ menu.addEventListener("click",function(){
             //     element.style.zIndex='555'
             // });
             // back.style.display = 'none'
+            back.style.visibility = 'hidden'
         }
     }
     else{
         back.style.opacity='0'
+        back.style.visibility = 'hidden'
         back.style.backgroundColor = 'rgba(0, 0, 0, 0.877)'
         // back.style.display = 'none'
         spans[0].style.top = '0'

@@ -5,7 +5,7 @@
 }
 body{
     font-family: "Poppins", sans-serif;
-    /*height:5000px*/
+    height:5000px
 }
 ul{
     list-style: none;
@@ -85,10 +85,11 @@ header nav ul li a:hover{
     top: 0;
     left: 0;
     height: 100vh;
-    background-color:rgba(0, 0, 0, 0.877);
+    background-color: rgba(0, 0, 0, 0.877);
     opacity: 0;
     /* display: none; */
-    transition: opacity .8s; 
+    transition: all .8s;
+    visibility: hidden; 
 }
 .list li .active{
     color: #f5df4e;
@@ -322,3 +323,13 @@ header nav ul li a:hover{
     }
 }
 /* End about */
+/* Start skills */
+.skills{
+    background-color: red;
+    width: 100%;
+}
+.skills{
+    display: grid;
+    grid-template-columns: auto auto repeat(3,1fr);
+}
+/* End skills */
