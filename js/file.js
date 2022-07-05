@@ -92,3 +92,16 @@ let interval_2 = setInterval(function(){
     }
 },300)
 // ------------------show h1 animated----------------
+let p_about = document.getElementsByName("topic_head")
+
+p_about.forEach(el=>{
+    el.style.marginLeft = `${(window.innerWidth - el.clientWidth)/2}px`
+    el.style.marginRight = `${(window.innerWidth - el.clientWidth)/2}px`
+})
+window.onresize = function(){
+    p_about.forEach(el=>{
+        el.style.marginLeft = `${(window.innerWidth - el.clientWidth)/2}px`
+        el.style.marginRight = `${(window.innerWidth - el.clientWidth)/2}px`
+    })
+}
+// ------------------center topic_head----------------
