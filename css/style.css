@@ -359,7 +359,11 @@ header nav ul li a:hover{
 .skills .container{
     position: relative;
 }
-
+@media screen and (max-width:550px) {
+    .skills .container{
+        padding: 0 20px;
+    }
+}
 .skills .container .bar{
     padding: 20px 0;
 }
