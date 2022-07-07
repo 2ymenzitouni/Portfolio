@@ -22,12 +22,12 @@
                     </div>
                     <div class="list">
                         <ul>
-                            <li><a class="active" href="#">Home</a></li>
-                            <li><a href="#">A propos</a></li>
-                            <li><a href="#">Ce que je fais</a></li>
-                            <li><a href="#">Voir Mon CV</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contacter</a></li>
+                            <li><a class="active" href="index.html">Home</a></li>
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#">CV</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact Me</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -40,10 +40,10 @@
                 <div class="col-1 col">
                     <p class="waving">Hi, I'm Aymen Zitouni</p>
                     <h1 class="developer"></h1>
-                    <p>Tunisien <img class="country" src="img/tunisia.png" width="20px"></p>
+                    <p>Tunisian <img class="country" src="img/tunisia.png" width="20px"></p>
                     <div class="buttons">
-                        <a href="#" class="btn-black">View My Works</a>
-                        <a href="#" class="btn-transparent">Contact Me <i class="fa-solid fa-arrow-down"></i></a>
+                        <a href="#portfolio" class="btn-black">View My Works</a>
+                        <a href="#contact" class="btn-transparent">Contact Me <i class="fa-solid fa-arrow-down"></i></a>
                     </div>
                 </div>
                 <div class="col-2 col">
@@ -53,7 +53,7 @@
         </div>
     <!-- End Content -->
     <!-- Start about -->
-    <div class="about">
+    <div class="about" id="about">
         <p name="topic_head">About Me</p>
         <div class="container">
             <h1>Know Me More</h1>
@@ -84,7 +84,7 @@
     </div>
     <!-- End about -->
     <!-- Start skills -->
-    <div class="skills">
+    <div class="skills" id="skills">
         <p name="topic_head">Skills</p>
         <div class="container">
             <h1>Know about my skills</h1>
@@ -93,7 +93,7 @@
                 <div class="percent_bar">
                     <ul>
                         <li></li>
-                        <li><span>60</span>%</li>
+                        <li><span>90</span>%</li>
                     </ul>
                 </div>
                 <h2 title="description">Description</h2>
@@ -135,6 +135,34 @@
         </div>
     </div>
     <!-- End skills -->
+    <!-- Start Portfolio -->
+    <div class="portfolio" id="portfolio">
+        <p name="topic_head">Portfolio</p>
+        <div class="container">
+            <h1>View My Portfolio</h1>
+            <h2 title="heading">Web - Works</h2>
+            <div class="col-1 col col-web">
+                <!-- <div class="img-1">
+                    <img src="img/1.jpg">
+                    <div class="info"><a href="#">View Work</a></div>
+                </div> -->
+                
+            </div>
+            <h2 title="heading">Software - Works</h2>
+            <div class="col-1 col col-software">
+                <div class="img-1"><img src="img/1.jpg" alt=""></div>
+            </div>
+            <h2 title="heading">Design - Works</h2>
+            <div class="col-1 col col-design">
+                <!-- <div class="img-1">
+                    <img src="img/1.jpg">
+                    <div class="info"><a href="#">View Work</a></div>
+                </div> -->
+                
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
     <script src="js/file.js"></script>
 </body>
 </html>

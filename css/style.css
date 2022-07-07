@@ -2,10 +2,12 @@
     padding: 0;
     margin: 0;
     /* outline: 1px solid green; */
+    scroll-behavior: smooth;
 }
 body{
     font-family: "Poppins", sans-serif;
-    height:5000px
+    height:5000px;
+    scroll-behavior: smooth;
 }
 ul{
     list-style: none;
@@ -17,6 +19,19 @@ a{
     padding-left: 100px;
     padding-right: 100px;
     margin: 0 auto;
+}
+::-webkit-scrollbar{
+    width: 20px;
+    background-color: #25252527;
+    border-radius: 20px;
+    /* border- */
+    /* z-index: -55; */
+    border-left: 1px solid #25252522;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#f5df4e;
+    border-radius: 20px;
+    border: 1px solid rgba(37, 37, 37, 0.5);
 }
 /* Start header */
 header{
@@ -187,7 +202,7 @@ header nav ul li a:hover{
 .content .container .col-2{
     width: 300px;
     height: 300px;
-    background-image: url("https://drive.google.com/uc?id=1rO1Jrt44SaC-dycLEFR09DGY8ND_5-JQ");
+    /* background-image: url("https://drive.google.com/uc?id=1rO1Jrt44SaC-dycLEFR09DGY8ND_5-JQ"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -214,10 +229,10 @@ header nav ul li a:hover{
     column-gap: 10px;
 }
 
-.about > p {
+[name = topic_head] {
     /* grid-column: 3/ span 1; */
     background-color: #f5df4e;
-    /* text-align: center; */
+    text-align: center;
     /* align-self: center; */
     padding: 10px;
     border-radius: 10px;
@@ -273,7 +288,7 @@ header nav ul li a:hover{
 }
 .about .container .col-2{
     /* background-color: yellow; */
-    background-image: url('https://drive.google.com/uc?id=1rO1Jrt44SaC-dycLEFR09DGY8ND_5-JQ');
+    /* background-image: url('https://drive.google.com/uc?id=1rO1Jrt44SaC-dycLEFR09DGY8ND_5-JQ'); */
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -384,7 +399,7 @@ header nav ul li a:hover{
     position: relative;
     z-index: 5555;
 }
-.skills .container h2[title=heading]::after{
+.container h2[title=heading]::after{
     content: "";
     position: absolute;
     bottom: 15px;
@@ -454,5 +469,99 @@ header nav ul li a:hover{
 .languages ul li img {
     width: 25px;
 }
-
 /* End skills */
+/* Start portfolio */
+.portfolio{
+    padding-top:100px;
+}
+.portfolio h2{
+    position: relative;
+    padding-bottom: 20px;
+}
+.portfolio .container h1{
+    text-align: center;
+}
+.container h1{
+    padding: 30px 0;
+}
+
+.portfolio .container h2{
+    padding: 20px 0;
+    /* width: 1200px; */
+}
+.portfolio .container{
+    /* width: 1200px; */
+}
+.portfolio .container .col{
+    /* max-width: 1200px; */
+    /* background-color: red; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    /* justify-content: space-around; */
+}
+.portfolio .container .col .img-1{
+    height: 300px;
+    position: relative;
+    /* z-index: -111; */
+}
+.img-1:hover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .6;
+    z-index: 111;
+    /* color: #fff; */
+}
+.portfolio .container .col .img-1:not(:first-child){
+    margin-left: 50px;
+}
+.portfolio .container .col .img-1 img{
+    height: 100%;
+}
+.portfolio .container .col .info{
+    position: absolute;
+    z-index: 11111111555555;
+    left: 0;
+    top:0;
+    /* opacity: 0; */
+    width: 100%;
+    height: 100%;
+}
+.portfolio .container .col .info a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 0;
+    opacity: 0;
+    margin-bottom: 20px;
+    color: #f5df4e;
+    font-weight: bold;
+    font-size: 30px;
+    border: 2px solid #f5df4e;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all .5s;
+}
+.portfolio .container .col .img-1:hover .info a{
+    opacity: 1;
+}
+.portfolio .container .col .img-1:hover .info a:hover{
+    background-color: #fade2c97;
+}
+@media screen and (max-width:550px) {
+    .portfolio .container{
+        padding: 0 20px;
+    }
+}
+button{
+    position: relative;
+}
+
+/* .container */
+/* End portfolio */

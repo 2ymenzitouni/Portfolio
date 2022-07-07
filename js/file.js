@@ -98,10 +98,44 @@ p_about.forEach(el=>{
     el.style.marginLeft = `${(window.innerWidth - el.clientWidth)/2}px`
     el.style.marginRight = `${(window.innerWidth - el.clientWidth)/2}px`
 })
-window.onresize = function(){
+window.onload = function(){
     p_about.forEach(el=>{
         el.style.marginLeft = `${(window.innerWidth - el.clientWidth)/2}px`
         el.style.marginRight = `${(window.innerWidth - el.clientWidth)/2}px`
     })
 }
 // ------------------center topic_head----------------
+const Arr_web = ["https://drive.google.com/uc?id=1eeZ4xLig-sHX09GnrQk98GN9IU5iZT_W","https://drive.google.com/uc?id=13BKgfH5UnKREVbt-VpwurvVIkLhWDa6c","https://drive.google.com/uc?id=1mXF9LmBIRyv3GvzLpIh-Z9SQSXFVewsY"]
+const Arr_design = ["https://drive.google.com/uc?id=1cS7wQB5YGsLRckrK-jZPuKwzwJNyW0R7","https://drive.google.com/uc?id=1TlWVjEY5V1FmQ95XoR-RCRa_UIdIpudL","https://drive.google.com/uc?id=1FD5sm4JAGv7NsFNYO6WTe7dy724S3c1v","https://drive.google.com/uc?id=1_kcAs7voxQiEY9MJGn9sUcvZz-hKhB6h"]
+let web = document.querySelector(".portfolio .col-web")
+let soft = document.querySelector(".portfolio .col-software")
+let design = document.querySelector(".portfolio .col-design")
+function display_img(Arr,domain){
+    for (let x = 0 ; x<= Arr.length-1;x++){
+        // creating div contains img and info_box
+        let img_box = document.createElement("div")
+        img_box.classList = 'img-1'
+        domain.appendChild(img_box)
+        // creating img and insert it inside img_box
+        let img = document.createElement("img")
+        img.src=Arr[x]
+        img_box.appendChild(img)
+        // creating div info and insert info_box inside img_box
+        let info_box = document.createElement("div")
+        info_box.classList='info'
+        img_box.appendChild(info_box)
+        // creating a_tag and insert it inside info box
+        let a_tag = document.createElement("a")
+        a_tag.textContent = 'View Work'
+        // a_tag.href = "#" changable
+        a_tag.target = "_blank"
+        info_box.appendChild(a_tag) 
+    }
+}
+// For Web - work
+display_img(Arr_web,web)
+// For Software Work
+display_img(Arr_web,soft)
+// Fro Design - work
+display_img(Arr_design,design)
+// ----------------------------------
