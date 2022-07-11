@@ -4,6 +4,7 @@
     /* outline: 1px solid green; */
     scroll-behavior: smooth;
 }
+/* Start General */
 body{
     font-family: "Poppins", sans-serif;
     height:5000px;
@@ -33,6 +34,106 @@ a{
     border-radius: 20px;
     border: 1px solid rgba(37, 37, 37, 0.5);
 }
+/* End General */
+
+/* Start social media */
+.social-media{
+    position: fixed;
+    right: 0;
+    width: 180px;
+    /* height: 200px; */
+    /* background-color: red; */
+    top: 80px;
+    z-index: 555555555;
+    /* padding-left: 50px; */
+}
+.social-media i{
+    font-size: 35px;
+    position: relative;
+    color: #252525;
+    flex: 1;
+    text-align: right;
+}
+.social-media i:hover{
+    cursor: pointer;
+}
+.social-media li a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px 20px 0;
+    font-weight: bold;
+}
+.social-media li span{
+    background-color: #252525;
+    width: 90px;
+    border-radius: 20px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    opacity: 0;
+    transition: all .8s;
+}
+.social-media li span::after{
+    content: "";
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 7px;
+    border: 19px solid ;
+}
+.social-media li:hover span{
+    opacity: 1;
+}
+.social-media li:first-child span{
+    background-color: #1A1E22;
+}
+.social-media li:first-child span::after{
+    border-color: transparent transparent transparent #1A1E22;
+}
+.social-media li:nth-child(2):hover i{
+    color: #0270AD;
+}
+.social-media li:nth-child(2) span{
+    background-color: #0270AD;
+}
+.social-media li:nth-child(2) span::after{
+    border-color: transparent transparent transparent #0270AD;
+}
+.social-media li:nth-child(3):hover i{
+    color: #1C96E8;
+}
+.social-media li:nth-child(3) span{
+    background-color: #1C96E8;
+}
+.social-media li:nth-child(3) span::after{
+    /* background-color: #1C96E8; */
+    border-color: transparent transparent transparent #1C96E8;
+}
+.social-media li:nth-child(4):hover i{
+    color: #1773ea;
+}
+.social-media li:nth-child(4) span{
+    background-color: #1773ea;
+}
+.social-media li:nth-child(4) span::after{
+    border-color: transparent transparent transparent #1773ea;
+}
+.social-media li:last-child:hover i{
+    color: red;
+}
+.social-media li:last-child span{
+    background-color: red;
+}
+.social-media li:last-child span::after{
+    border-color: transparent transparent transparent red;
+}
+
+/* End social media */
 /* Start header */
 header{
     position: fixed;
@@ -202,7 +303,7 @@ header nav ul li a:hover{
 .content .container .col-2{
     width: 300px;
     height: 300px;
-    background-image: url("https://drive.google.com/uc?id=1K_2Yw1StSPrRE1ZgUaln39KaPsKwZ1NK"); 
+    background-image: url("https://drive.google.com/uc?id=12TMjri6fM4szjX2mnkPKLGxIGXO3I4Zs");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -288,7 +389,7 @@ header nav ul li a:hover{
 }
 .about .container .col-2{
     /* background-color: yellow; */
-    background-image: url('https://drive.google.com/uc?id=1K_2Yw1StSPrRE1ZgUaln39KaPsKwZ1NK'); 
+    background-image: url('https://drive.google.com/uc?id=12TMjri6fM4szjX2mnkPKLGxIGXO3I4Zs');
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -380,7 +481,7 @@ header nav ul li a:hover{
     }
 }
 .skills .container .bar{
-    padding: 20px 0;
+    padding: 0px 0;
 }
 .skills .container .bar p{
     font-weight: bold;
@@ -389,9 +490,6 @@ header nav ul li a:hover{
     /* grid-column: span 5; */
     text-align: center;
     padding: 30px 0;
-}
-.skills .container .web{
-    /* grid-column: span 5; */
 }
 .skills .container h2{
     padding-bottom: 20px;
@@ -426,10 +524,10 @@ header nav ul li a:hover{
 }
 .skills .percent_bar ul li:first-child{
     flex-basis: 50%;
-    height: 10px;
+    height: 30px;
     background-color: #f3f3f3;
     border-radius: 5px;
-    border: 1px solid #2525251c;
+    border: 2px solid #2525251c;
     position: relative;
     z-index: 44;
 }
@@ -489,9 +587,6 @@ header nav ul li a:hover{
     padding: 20px 0;
     /* width: 1200px; */
 }
-.portfolio .container{
-    /* width: 1200px; */
-}
 .portfolio .container .col{
     /* max-width: 1200px; */
     /* background-color: red; */
@@ -525,7 +620,7 @@ header nav ul li a:hover{
 }
 .portfolio .container .col .info{
     position: absolute;
-    z-index: 11111111555555;
+    z-index: 115555;
     left: 0;
     top:0;
     /* opacity: 0; */

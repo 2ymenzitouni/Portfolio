@@ -98,7 +98,7 @@ p_about.forEach(el=>{
     el.style.marginLeft = `${(window.innerWidth - el.clientWidth)/2}px`
     el.style.marginRight = `${(window.innerWidth - el.clientWidth)/2}px`
 })
-window.onload = function(){
+window.onresize = function(){
     p_about.forEach(el=>{
         el.style.marginLeft = `${(window.innerWidth - el.clientWidth)/2}px`
         el.style.marginRight = `${(window.innerWidth - el.clientWidth)/2}px`
@@ -106,7 +106,7 @@ window.onload = function(){
 }
 // ------------------center topic_head----------------
 const Arr_web = ["https://drive.google.com/uc?id=1eeZ4xLig-sHX09GnrQk98GN9IU5iZT_W","https://drive.google.com/uc?id=13BKgfH5UnKREVbt-VpwurvVIkLhWDa6c","https://drive.google.com/uc?id=1mXF9LmBIRyv3GvzLpIh-Z9SQSXFVewsY"]
-const Arr_design = ["https://drive.google.com/uc?id=1cS7wQB5YGsLRckrK-jZPuKwzwJNyW0R7","https://drive.google.com/uc?id=1TlWVjEY5V1FmQ95XoR-RCRa_UIdIpudL","https://drive.google.com/uc?id=1FD5sm4JAGv7NsFNYO6WTe7dy724S3c1v","https://drive.google.com/uc?id=1_kcAs7voxQiEY9MJGn9sUcvZz-hKhB6h"]
+const Arr_design = ["https://drive.google.com/uc?id=1B7tSo21yoEly97gm0WcPbsaLJ00S-Qz2","https://drive.google.com/uc?id=1K2aCX_qvkJePH0roylW7_mOCsnKmS5VZ","https://drive.google.com/uc?id=1QHqxXxj3mNvnAboow_vi95DHT-I50N8V","https://drive.google.com/uc?id=1y4ufMaSgEdHnUUGkhH1RyJEAwXUNEpA1","https://drive.google.com/uc?id=1qfD41hZW6YXt2ZZSC98iFACb9YNcORD_","https://drive.google.com/uc?id=1pHZB8XuJfnnKuHYRl3rePHu8_xXUUTXs","https://drive.google.com/uc?id=1b053fhUsjERTIlIoqwJkRHsXCyUe6QZg","https://drive.google.com/uc?id=1yn09sOPqiDQkSdy9su-a_4QHYtCDxkii","https://drive.google.com/uc?id=1FAAsFjny58ON56v8m6tFGkmK0KoVIJb3","https://drive.google.com/uc?id=1DQc8FpI6YLVndnTFRNF22kctkcbSV9yr","https://drive.google.com/uc?id=1uVvaVYRtm34qwT9I9MySQ2Tv24Zj8KFi","https://drive.google.com/uc?id=1DAX00Hn258lrzCS7_xAERztBbUVzNgfu"]
 let web = document.querySelector(".portfolio .col-web")
 let soft = document.querySelector(".portfolio .col-software")
 let design = document.querySelector(".portfolio .col-design")
